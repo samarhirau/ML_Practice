@@ -1,0 +1,53 @@
+🥇 1. Logistic Regression
+
+✔ Beginner friendly
+✔ Explainable
+✔ Interview favourite
+
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression()
+
+
+👉 Use when:
+
+Linear relationship expected
+
+Baseline banana ho
+
+🥈 2. Decision Tree
+
+✔ Non-linear patterns
+✔ Easy to visualize
+✔ No scaling needed
+
+from sklearn.tree import DecisionTreeClassifier
+model = DecisionTreeClassifier(max_depth=5)
+
+🥉 3. Random Forest (Best practical choice)
+
+✔ High accuracy
+✔ Handles mixed data well
+✔ Less overfitting
+
+from sklearn.ensemble import RandomForestClassifier
+model = RandomForestClassifier(n_estimators=100)
+
+🔹 STEP 5: Model comparison (MANDATORY)
+
+Same data → multiple models → compare
+
+from sklearn.metrics import accuracy_score
+
+models = {
+    "Logistic": LogisticRegression(),
+    "Tree": DecisionTreeClassifier(),
+    "RF": RandomForestClassifier()
+}
+
+for name, model in models.items():
+    model.fit(X_train, y_train)
+    pred = model.predict(X_test)
+    print(name, accuracy_score(y_test, pred))
+
+
+👉 Jo stable + high accuracy de = winner 🏆
