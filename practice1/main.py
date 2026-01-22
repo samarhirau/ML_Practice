@@ -67,3 +67,7 @@ print("Precision:", precision)
 print("Recall:", recall)
 print("F1 Score:", f1)
 print("Confusion Matrix:\n", cm)
+
+
+
+# practice to find Placement Status of students based on various features
